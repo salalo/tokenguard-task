@@ -16,8 +16,9 @@ const granularityToNumber: Record<Granularity, number> = {
   '4 weeks': 4,
 };
 
-const formatGranularity = (dates: string[], interval: Granularity) => {
+export const formatGranularity = (dates: string[], interval: Granularity) => {
   const num = granularityToNumber[interval];
+  if (!num) return dates;
   return dates.filter((_, index) => index % num === 0);
 };
 

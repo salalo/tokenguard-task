@@ -2,7 +2,7 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 export const ChartLoader = () => {
   return (
-    <div className="flex flex-col space-y-3 p-4">
+    <div className="flex flex-col space-y-3 p-4" data-testid="chart-loader">
       {/* Simulate the chart title */}
       <Skeleton className="h-6 w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4 rounded" />
 
